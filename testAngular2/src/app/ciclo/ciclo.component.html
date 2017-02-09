@@ -1,0 +1,16 @@
+<div class="checkbox">
+  <label>
+      <input type="checkbox" [(ngModel)]="valCheck">Option 1
+      </label>
+</div>
+{{valCheck}}
+<h1 #local [directiveTest]="valCheck">
+    Ciclo: {{valor}}
+</h1>
+
+<button class="btn btn-success" (click)="valorMais()">
+    Click
+</button>
+<p>
+  {{local.textContent}}  
+</p>

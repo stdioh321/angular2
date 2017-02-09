@@ -1,0 +1,40 @@
+<h1>
+  my-pipe works!
+</h1>
+
+<input type="text"  class="form-control" [(ngModel)]="livro.name" placeholder="Name" />
+<hr />
+
+<table class="table table-inverse">
+  <tbody>
+    <tr class="tr">
+      <td class="td" scope="row">Name</td>
+      <td class="td">{{livro.name | camelCase:"1":"2":"3"}}</td>
+    </tr>
+    <tr class="tr">
+      <td class="td" scope="row">Rate</td>
+      <td class="td">{{livro.rate | number:"1.1-3"}}</td>
+    </tr>
+    <tr class="tr">
+      <td class="td" scope="row">Date</td>
+      <td class="td">{{livro.date | date}}</td>
+    </tr>
+    <tr class="tr">
+      <td class="td" scope="row">Price</td>
+      <td class="td">{{livro.price | currency:'BRL':true}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>
+  {{livro | json}}
+</p>
+
+
+<p>
+  {{prom | async}}
+</p>
+<p>
+  {{prom2 | json}}
+</p>

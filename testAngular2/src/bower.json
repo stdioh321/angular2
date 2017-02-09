@@ -1,0 +1,17 @@
+{
+  "name": "src",
+  "homepage": "https://github.com/stdioh321/angular2",
+  "authors": [
+    "hdias <diaslinoh@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,32 @@
+<h1>
+  cria-curso2 works!
+</h1>
+
+<form class="form-horizontal" name="myForm">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Curso</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Jane Doe" name="cs.name" [(ngModel)]="cs" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button class="btn btn-primary btn-block" (click)="onAddCurso(cs)">
+    Add Curso
+  </button>
+    </div>
+  </div>
+</form>
+<hr />
+<input type="text" class="form-control" placeholder="MyTest" [(ngModel)]="obj.bd" (keyup)="kUp($event)" required  />
+<hr />
+<h4>
+  {{obj.dirty}}
+</h4>
+<hr />
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of list">
+    {{item}}
+  </li>
+</ul>

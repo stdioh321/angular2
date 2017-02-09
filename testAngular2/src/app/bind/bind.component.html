@@ -1,0 +1,62 @@
+<h2>
+	Ola BIND
+</h2>
+
+<section>
+	<article>
+		<output valor="4" (mudouValor)="alterouValor($event)"></output>
+	</article>
+</section>
+
+
+<imp [nome]="mdl" val="JAOZINHO2"></imp>
+
+<section>
+	<article >
+		<img [src]="imgSrc" style="margin:0 auto;" class="img-responsive" />
+	</article>
+</section>
+
+<section>
+	<article>
+		<h3>Interpolaçäo</h3>
+		<p>{{tmp}}</p>
+		<a href="{{getValor()}}" target="_blank">
+			<i>
+                {{getValor()}}
+            </i>
+		</a>
+		<!--<img [src]="getUrl()" class="img-responsive" />-->
+	</article>
+</section>
+
+<section>
+	<article>
+		<h3>Class e Styleeeeeeee</h3>
+		<input type="text" class="form-control" placeholder="Type here..." [(ngModel)]="mdl" />
+		<button class="btn btn-success btn-block" (click)="cliked($event)">
+            Click
+        </button>
+		<div>
+			Selecione
+			<select class="form-control" #classe (change)="0">
+                <option value="alert-success" class="alert " role="alert" >Success</option>
+                <option value="alert-info" class="alert " role="alert" >Info</option>
+                <option value="alert-warning" class="alert " role="alert" >Waring</option>
+                <option value="alert-danger" class="alert " role="alert" >Danger</option>
+            </select>
+		</div>
+		<hr/>
+		<h3 class="alert {{classe.value}}" [class.jao]="classe.value=='alert-success'">
+			{{classe.value.split("-")[1]}}
+		</h3>
+		<hr />
+		<h3 class="alert alert-danger" [style.display]="classe.value == 'alert-danger'? 'block' : 'none'">
+			Only on Danger
+		</h3>
+		<h1 class="high">
+			{{mdl}}
+		</h1>
+
+	</article>
+</section>
